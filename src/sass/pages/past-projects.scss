@@ -1,0 +1,62 @@
+$underline-size: 3px;
+
+.row-past-projects {
+  font-family: $secondary-font;
+
+  .header-past-project {
+    display: inline-block;
+    background-image: linear-gradient(white, white),
+      linear-gradient($ribbon-colour, $ribbon-colour),
+      linear-gradient($shadow-ribbon-colour, $shadow-ribbon-colour);
+    background-size: 20px $underline-size, 100% $underline-size,
+      0 $underline-size;
+    background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 2s linear, background-position 2s linear;
+
+    &:hover {
+      background-size: 20px $underline-size, 0 $underline-size,
+        100% $underline-size;
+      background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+    }
+  }
+
+  img {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .btn {
+    background-color: $ribbon-colour;
+    width: 125px;
+    border-radius: 25px;
+    border-color: $ribbon-colour;
+
+    &:hover {
+      background-color: $shadow-ribbon-colour;
+    }
+
+    &:active {
+      background-color: $ribbon-colour !important;
+      border-color: $ribbon-colour !important;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}
+
+#left-tabs-example-tabpane-tab-past-projects {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  #left-tabs-example-tabpane-tab-past-projects {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,60 @@
+$background-grey: #d4d4d2;
+$background-blue: #7e98b5;
+$text-color: white;
+$grey-space: 0.25;
+
+.business-card {
+  max-width: 300px;
+  margin: auto;
+  padding: 1rem 0rem 0rem;
+  color: $text-color;
+  background-image: linear-gradient(
+    180deg,
+    $background-grey percentage($grey-space),
+    $background-blue percentage($grey-space) 100%
+  );
+  position: relative;
+  z-index: 20;
+  -webkit-box-shadow: 7px 4px 5px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 4px 5px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 4px 5px -4px rgba(0, 0, 0, 0.75);
+
+  hr {
+    width: 175px;
+    background-color: white;
+  }
+
+  .business-card-top {
+    img {
+      display: block;
+      margin: auto;
+      margin-top: percentage($grey-space - 0.15);
+      border-radius: 100px;
+      width: 150px;
+    }
+
+    .business-card-title {
+      font-weight: bold;
+    }
+
+    .business-card-sub-title {
+      font-weight: normal;
+    }
+  }
+
+  .business-card-bottom {
+    padding: 1rem;
+
+    li {
+      word-break: break-all;
+
+      a {
+        color: $text-color;
+      }
+    }
+  }
+
+  button {
+    border-radius: 0rem;
+  }
+}

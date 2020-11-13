@@ -1,0 +1,47 @@
+.app {
+  width: 100%;
+  height: auto;
+  min-width: 280px;
+  min-height: 100vh;
+  position: absolute;
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .app-container {
+    padding-top: 10%;
+    margin: auto;
+
+    .business-card-column {
+      padding-right: 0px;
+
+      .business-card {
+        margin-right: 0px;
+      }
+    }
+
+    .content-window-column {
+      padding-left: 0px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .app {
+    .app-container {
+      .business-card-column {
+        padding-right: 15px;
+        margin: auto;
+
+        .business-card {
+          margin-right: auto;
+          margin: auto;
+        }
+      }
+
+      .content-window-column {
+        padding-left: 15px;
+      }
+    }
+  }
+}

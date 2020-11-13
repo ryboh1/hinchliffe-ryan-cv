@@ -1,0 +1,45 @@
+$ribbon-colour: #c72929;
+$alt-ribbon-colour: #f4ff77;
+
+.content-window {
+  height: 95%;
+  margin-top: 2%;
+  z-index: 19;
+
+  .col-content-window {
+    z-index: 18;
+
+    .window {
+      background-color: white;
+      height: 100%;
+    }
+  }
+
+  .tab-content {
+    height: 100%;
+  }
+}
+
+/*larger than lg screens*/
+@media (min-width: 992px) {
+  .content-window {
+    .col-content-window {
+      .window {
+        height: 490px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+/*smaller than lg screens*/
+@media (max-width: 992px) {
+  .content-window {
+    .window {
+      -webkit-box-shadow: 10px 4px 5px -4px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 4px 5px -4px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 4px 5px -4px rgba(0, 0, 0, 0.75);
+      padding-bottom: 4rem;
+    }
+  }
+}

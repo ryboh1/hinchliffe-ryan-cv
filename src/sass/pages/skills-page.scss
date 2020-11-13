@@ -1,0 +1,128 @@
+@import "./languages.scss";
+
+$hr-beggining: 4%;
+
+.tab-pane-tab-skills {
+  .col {
+    text-align: center;
+    padding-top: 1rem;
+    font-family: $secondary-font;
+
+    hr {
+      background-color: $ribbon-colour;
+      height: 3px;
+      position: absolute;
+      width: 33% - 8%;
+      top: calc(20px + 1rem);
+      margin-left: $hr-beggining;
+      transition: 1s;
+    }
+
+    .nav-item {
+      font-weight: bold;
+      text-transform: capitalize;
+      display: inline-block;
+      width: 33%;
+
+      a {
+        color: black;
+      }
+
+      &.tab-languages.currently-active ~ hr {
+        margin-left: $hr-beggining;
+      }
+      &.tab-frameworks.currently-active ~ hr {
+        margin-left: 35%;
+      }
+      &.tab-technologies.currently-active ~ hr {
+        margin-left: 66%;
+      }
+
+      &.tab-languages:hover ~ hr {
+        margin-left: $hr-beggining;
+      }
+      &.tab-frameworks:hover ~ hr {
+        margin-left: 35%;
+      }
+      &.tab-technologies:hover ~ hr {
+        margin-left: 66%;
+      }
+    }
+  }
+
+  .col-lg-skills-tab {
+    button {
+      @include sub-tab-button;
+
+      &::after {
+        vertical-align: middle;
+      }
+
+      &:active {
+        color: black !important;
+        border-color: $ribbon-colour !important;
+        background-color: transparent !important;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .lg-skills-tabs {
+    display: block !important;
+
+    &.d-none {
+      display: none !important;
+    }
+  }
+
+  .dropdown-menu {
+    width: 175px;
+  }
+}
+
+.technology-container {
+  margin-top: 2rem;
+
+  .technology-buttons {
+    position: relative;
+    top: 0px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    border-radius: 100px;
+    padding: 1rem;
+    margin: 1rem;
+    transition: 0.25s;
+    box-shadow: -1px 3px 3px 0 rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      top: -3px;
+      box-shadow: -6px 14px 12px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .col-comfort-level {
+    top: 15px !important;
+    text-align: left !important;
+  }
+
+  .col-skills-title,
+  .col-sm-7 {
+    position: relative;
+    top: 30px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .technology-container {
+    .technology-buttons {
+      display: block;
+    }
+  }
+}

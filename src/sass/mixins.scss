@@ -1,0 +1,23 @@
+@mixin tab-header {
+  font-weight: bold;
+  color: black;
+  font-family: $secondary-font;
+  font-size: 1.3em;
+}
+
+@mixin before-underline {
+  content: "";
+  position: absolute;
+  height: 3px;
+  transition: 1s;
+}
+
+@mixin sub-tab-button {
+  color: black;
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 175px;
+  background-color: transparent;
+  border-color: $ribbon-colour;
+  border-width: 2px;
+}

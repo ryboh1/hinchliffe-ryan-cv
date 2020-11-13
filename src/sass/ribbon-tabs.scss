@@ -1,0 +1,229 @@
+.content-window {
+  .col-ribbons-tab {
+    margin-top: 25px;
+
+    .ribbon-tabs {
+      z-index: 17;
+      position: relative;
+      right: 30px;
+      font-weight: bold;
+      text-transform: capitalize;
+
+      .individual-ribbon {
+        position: relative;
+        text-align: left;
+        width: 70%;
+        background-color: $ribbon-colour;
+        padding: 0.5rem 0rem;
+        margin: 1rem 0rem;
+        transition: 0.2s;
+
+        &.active-tab {
+          margin-left: 40px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &.tab-red-button {
+          background-color: $alt-ribbon-colour;
+          font-weight: bold;
+
+          &::before {
+            background-color: $alt-ribbon-colour;
+          }
+
+          a {
+            color: $ribbon-colour;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 0px;
+            border: 28px solid $alt-ribbon-colour;
+            border-right-color: transparent;
+            top: 0;
+            left: calc(70% + 30px);
+          }
+
+          .icon-red-button {
+            width: 2em;
+          }
+        }
+
+        &:hover {
+          margin-left: 40px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 50px;
+          background-color: $ribbon-colour;
+          height: 56px;
+          top: 0;
+          left: calc(1rem - 60px);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 50px;
+          height: 0px;
+          border: 28px solid $ribbon-colour;
+          border-right-color: transparent;
+          top: 0;
+          left: calc(70% + 30px);
+        }
+      }
+
+      path {
+        fill: $text-color;
+      }
+      a {
+        color: $text-color;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline: none;
+          outline-color: transparent;
+        }
+      }
+    }
+  }
+
+  .window {
+    .lg-ribbon-tabs {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem 0rem;
+      text-transform: capitalize;
+
+      button {
+        background-color: $ribbon-colour;
+        border-color: $ribbon-colour;
+        border-radius: 0px;
+        width: 60%;
+        max-width: 250px;
+        position: relative;
+        text-transform: capitalize;
+        transition: 1s;
+
+        &.alt-ribbon-colour {
+          color: $ribbon-colour;
+          background-color: $alt-ribbon-colour;
+          border-color: $alt-ribbon-colour;
+
+          &::before,
+          &::after {
+            border-color: $alt-ribbon-colour;
+          }
+
+          &::before {
+            border-left-color: transparent;
+          }
+
+          &::after {
+            border-right-color: transparent;
+          }
+
+          .ribbon-shadow {
+            &::before,
+            &::after {
+              border-color: $alt-shadow-ribbon-colour transparent transparent
+                transparent;
+            }
+          }
+        }
+
+        &:active {
+          background: $ribbon-colour;
+          border-color: $ribbon-colour;
+        }
+
+        &:focus {
+          box-shadow: none !important;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 7px;
+          z-index: -1;
+          height: 0px;
+          border: 19px solid $ribbon-colour;
+          transition: 1s;
+        }
+
+        &::before {
+          left: calc(-40px + 11px);
+          border-left-color: transparent;
+        }
+
+        &::after {
+          right: calc(-40px + 11px);
+          border-right-color: transparent;
+        }
+
+        .ribbon-shadow {
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-style: solid;
+            border-color: $shadow-ribbon-colour transparent transparent
+              transparent;
+            transition: 1s;
+          }
+
+          &::before {
+            bottom: -10px;
+            left: 0;
+            border-width: 10px 0 0 10px;
+          }
+
+          &::after {
+            bottom: -10px;
+            right: 0;
+            border-width: 10px 10px 0 0;
+          }
+        }
+
+        svg {
+          position: relative;
+          left: 5px;
+          bottom: 2px;
+        }
+      }
+
+      .dropdown-menu {
+        width: 60%;
+        max-width: 250px;
+        padding: 0rem;
+        text-align: center;
+
+        a {
+          font-weight: bold;
+          background-color: $shadow-ribbon-colour;
+          color: $text-color;
+        }
+
+        .lg-tab-red-button {
+          a {
+            color: $ribbon-colour;
+            background-color: $alt-ribbon-colour;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active,
+.show > .btn-success.dropdown-toggle {
+  background-color: transparent;
+  color: black;
+  border-color: $ribbon-colour;
+}
+.lg-ribbon-tabs {
+  .btn-success:not(:disabled):not(.disabled).active,
+  .btn-success:not(:disabled):not(.disabled):active,
+  .show > .btn-success.dropdown-toggle {
+    color: white;
+  }
+}

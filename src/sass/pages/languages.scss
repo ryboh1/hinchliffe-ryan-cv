@@ -1,0 +1,44 @@
+.skills-languages-container {
+  .row-skills-languages {
+    margin: 0rem auto;
+    max-width: 550px;
+    .col-skills-title {
+      text-align: left;
+
+      p {
+        font-weight: bold;
+      }
+    }
+
+    .col-comfort-level {
+      top: 35px;
+      text-align: right;
+
+      .comfort-level {
+        color: $ribbon-colour;
+        font-weight: bold;
+      }
+    }
+
+    .col-skills-title {
+      top: 20px;
+    }
+
+    .skills-bar {
+      border: 2px solid $ribbon-colour;
+      height: 15px;
+      border-radius: 50px;
+
+      .languages-skills,
+      .framework-skills {
+        transition: 1s;
+        background-color: $ribbon-colour;
+        height: 7px;
+        margin-top: 2px;
+        margin-left: 2.5px;
+        width: 1%;
+        border-radius: 50px;
+      }
+    }
+  }
+}

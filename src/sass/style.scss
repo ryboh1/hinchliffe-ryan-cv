@@ -1,0 +1,41 @@
+/* Variables*/
+@import "variables.scss";
+@import "mixins.scss";
+
+/*Stylesheets*/
+@import "index.scss";
+@import "app.scss";
+@import "business-card.scss";
+@import "content-window.scss";
+@import "ribbon-tabs.scss";
+@import "react-sign.scss";
+@import "misc.scss";
+
+/* pages */
+@import "./pages/skills-page.scss";
+@import "./pages/experiences-page.scss";
+@import "./pages/past-projects.scss";
+@import "./pages/about-me-page.scss";
+@import "./pages/red-button-page.scss";
+
+@font-face {
+  font-family: roboto;
+  src: url("./font/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: roboto;
+  font-weight: bold;
+  src: url("./font/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: courier-prime;
+  src: url("./font/courier-prime/CourierPrime-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: courier-prime;
+  font-weight: bold;
+  src: url("./font/courier-prime/CourierPrime-Bold.ttf") format("truetype");
+}
