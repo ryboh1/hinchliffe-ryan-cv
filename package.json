@@ -2,7 +2,7 @@
   "name": "ryan-hinchliffe-cv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ryboh1.github.io/ryan-hinchliffe-cv",
+  "homepage": "https://ryboh1.github.io/hinchliffe-ryan-cv/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -26,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

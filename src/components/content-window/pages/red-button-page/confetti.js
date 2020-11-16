@@ -152,7 +152,6 @@ export default function createTheConfetti() {
 
     redButton.addEventListener("click", (e) => {
         window.buttonPressed = !window.buttonPressed
-
         e.target.style.backgroundPositionY = (window.buttonPressed) ? "150px": "0px";
 
         if (window.buttonPressed) {
@@ -161,7 +160,5 @@ export default function createTheConfetti() {
         else {
             clearInterval(window.theConfettiLoop)
         }
-
     })
-
 }

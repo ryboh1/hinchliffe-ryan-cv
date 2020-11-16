@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
 //css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,4 +16,4 @@ console.log(
   + "Any questions you have please message me."
   + "I'd love to hear from you :)"
 )
-reportWebVitals();
+

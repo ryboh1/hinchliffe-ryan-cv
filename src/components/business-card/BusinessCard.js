@@ -7,7 +7,6 @@ import { faEnvelope, faHome, faPhoneAlt } from '@fortawesome/free-solid-svg-icon
 import { Button } from "react-bootstrap"
 
 export default class BusinessCard extends React.Component{
-
     render(){
         return(
             <div className="business-card">
