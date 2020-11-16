@@ -16,7 +16,7 @@ export default class LgViewTabHeaders extends Component {
             theTabs.push(
                 <Nav.Item
                     key={i}
-                    className={(i === 0) ? "d-none lg-skills-tabs lg-tab-" + this.props.tabPageNames[i] : "lg-skills-tabs lg-tab-" + this.props.tabPageNames[i]}
+                    className={(i === 0) ? "d-none lg-" + this.props.pageName + "-tabs lg-tab-" + this.props.tabPageNames[i] : "lg-" + this.props.pageName + "-tabs lg-tab-" + this.props.tabPageNames[i]}
                 >
                     <Nav.Link
                         eventKey={this.props.tabPageNames[i]}
@@ -48,9 +48,7 @@ export default class LgViewTabHeaders extends Component {
 
     render() {
         return (
-            <Dropdown.Menu
-                
-            >
+            <Dropdown.Menu>
                 {this.createLgScreenTabHeaders()}
             </Dropdown.Menu>
         )

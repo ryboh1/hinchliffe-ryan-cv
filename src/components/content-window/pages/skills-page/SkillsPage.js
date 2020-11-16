@@ -17,6 +17,7 @@ export default class SkillsPage extends Component {
         super(props)
 
         this.state = {
+            pageName:"skills",
             languagesObject: {
                 skillNames: ["Javascript", "HTML", "CSS", "Java", "PHP"],
                 skillLength: ["1 year", "2 years", "2 years", "Recent", "Recent"],
@@ -63,9 +64,12 @@ export default class SkillsPage extends Component {
                 <Row
                     className="skills-page__tab-header-row"
                 >
-                    <TabHeaders 
+                    <TabHeaders
                         tabPageNames={this.state.subTabPageNames}
-                    />
+                        navItemClass="skills-page__tab-item"
+                    >
+                        <hr className="ribbon-background-color position-absolute" key={this.state.subTabPageNames.length}></hr>
+                    </TabHeaders>
 
                     <Col className="col-lg-skills-tab d-block d-lg-none">
                         <Dropdown>
@@ -79,6 +83,7 @@ export default class SkillsPage extends Component {
 
                             <LgViewTabHeaders 
                                 tabPageNames={this.state.subTabPageNames}
+                                pageName={this.state.pageName}
                             />
 
                         </Dropdown>
