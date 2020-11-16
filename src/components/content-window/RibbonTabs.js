@@ -65,7 +65,7 @@ export default class RibbonTabs extends Component {
                     <Nav.Link onClick={(e) => this.addActiveTabClass(e)} eventKey={this.props.classNames[4]}>
                         {this.props.pageNames[4]}
                         <span className="fa-li">
-                            <img className="icon-red-button" src={this.props.redButtonIcon} />
+                            <img className="icon-red-button" src={this.props.redButtonIcon} alt="red button icon" />
                         </span>
                     </Nav.Link>
                 </Nav.Item>
