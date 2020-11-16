@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-import { Tab, Col, Row, Nav, Dropdown } from 'react-bootstrap'
+import { Tab, Col, Row, Dropdown } from 'react-bootstrap'
 
 //Components
 import SkillsBar from "./SkillsBar"
 import Technologies from "./Technologies"
+import TabHeaders from "../TabHeaders"
+import LgViewTabHeaders from "../LgViewTabHeaders"
+import TabContent from "../TabContent"
 
 //Helper object
 import TabSync from "../../../../helper-classes/TabSync"
@@ -29,94 +32,6 @@ export default class SkillsPage extends Component {
             subTabPageNames: ["languages", "frameworks", "technologies"]
         }
 
-        this.createTabHeaders = this.createTabHeaders.bind(this)
-        this.createTabContent = this.createTabContent.bind(this)
-        this.createLgScreenTabHeaders = this.createLgScreenTabHeaders.bind(this)
-        this.addClassToTab = this.addClassToTab.bind(this)
-    }
-
-    createTabHeaders(theSubTabPageNames) {
-        let theTabs = []
-        for (let i = 0; i < theSubTabPageNames.length; i++) {
-            theTabs.push(
-                <Nav.Item
-                    key={i}
-                    className={(i === 0) ? " skills-page__tab-item currently-active tab-" + theSubTabPageNames[i] : "tab-" + theSubTabPageNames[i]}
-                >
-                    <Nav.Link
-                        eventKey={theSubTabPageNames[i]}
-                        onClick={e => this.addClassToTab(e, "currently-active", theSubTabPageNames)}
-                    >
-                        {theSubTabPageNames[i]}
-                    </Nav.Link>
-                </Nav.Item>
-            )
-        }
-        theTabs.push(<hr className="ribbon-background-color position-absolute" key={theSubTabPageNames.length}></hr>)
-        return theTabs
-    }
-
-    addClassToTab(theEvent, theClass, theSubTabs) {
-        //1. remove currently active from previous tabs
-        for (let i = 0; i < theSubTabs.length; i++) {
-            let theTab = document.getElementsByClassName(`tab-${theSubTabs[i]}`)
-            theTab[0].classList.remove(theClass)
-        }
-
-        //2. add class to parent element 
-        theEvent.currentTarget.parentElement.classList.add(theClass)
-    }
-
-    createLgScreenTabHeaders(theSubTabPageNames) {
-        let theTabs = []
-        for (let i = 0; i < theSubTabPageNames.length; i++) {
-            theTabs.push(
-                <Nav.Item
-                    key={i}
-                    className={(i === 0) ? "d-none lg-skills-tabs lg-tab-" + theSubTabPageNames[i] : "lg-skills-tabs lg-tab-" + theSubTabPageNames[i]}
-                >
-                    <Nav.Link
-                        eventKey={theSubTabPageNames[i]}
-                        onClick={e => this.changeDropDownMenuName(e)}
-                    >
-                        {theSubTabPageNames[i]}
-                    </Nav.Link>
-                </Nav.Item>
-            )
-        }
-        return theTabs
-    }
-
-    changeDropDownMenuName(theEvent) {
-        //1. loop through all tabs and remove any d-none classes
-        let theClassElements = document.getElementsByClassName("lg-skills-tabs")
-        for (let i = 0; i < theClassElements.length; i++) {
-            theClassElements[i].classList.remove("d-none")
-        }
-
-        //2. add d-none to current class list
-        theEvent.currentTarget.parentElement.classList.add("d-none")
-
-        //3. change text of current button
-        let toggleButton = document.getElementById("skills-page-dropdown-toggle-menu-button")
-        toggleButton.innerText = theEvent.currentTarget.innerText
-    }
-
-    createTabContent(theContent, theSubTabPageNames) {
-        let theTabContent = []
-
-        for (let i = 0; i < theSubTabPageNames.length; i++) {
-            theTabContent.push(
-                <Tab.Pane
-                    eventKey={theSubTabPageNames[i]}
-                    key={i}
-                >
-                    {(theContent[i] !== undefined) ? theContent[i] : null}
-                </Tab.Pane>
-            )
-        }
-
-        return theTabContent
     }
 
     componentDidMount() {
@@ -133,7 +48,11 @@ export default class SkillsPage extends Component {
 
     render() {
 
-        let content = [<SkillsBar skillObject={this.state.languagesObject} theClass={this.state.skillsClasses[0]} />, <SkillsBar skillObject={this.state.frameworksObject} theClass={this.state.skillsClasses[1]} />, <Technologies technologyNames={this.state.technologies} />]
+        let content = [
+        <SkillsBar skillObject={this.state.languagesObject} theClass={this.state.skillsClasses[0]} />, 
+        <SkillsBar skillObject={this.state.frameworksObject} theClass={this.state.skillsClasses[1]} />, 
+        <Technologies technologyNames={this.state.technologies} />
+        ]
 
         return (
             <Tab.Container
@@ -144,11 +63,13 @@ export default class SkillsPage extends Component {
                 <Row
                     className="skills-page__tab-header-row"
                 >
-                    <Col className="d-none d-lg-block skills-page__tab-header-col">
-                        {this.createTabHeaders(this.state.subTabPageNames)}
-                    </Col>
+                    <TabHeaders 
+                        tabPageNames={this.state.subTabPageNames}
+                    />
+
                     <Col className="col-lg-skills-tab d-block d-lg-none">
                         <Dropdown>
+
                             <Dropdown.Toggle
                                 id="skills-page-dropdown-toggle-menu-button"
                                 variant="success"
@@ -156,23 +77,27 @@ export default class SkillsPage extends Component {
                                 {this.state.subTabPageNames[0]}
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu
-                                className={this.state.dropDownMenuClass}
-                            >
-                                {this.createLgScreenTabHeaders(this.state.subTabPageNames)}
-                            </Dropdown.Menu>
+                            <LgViewTabHeaders 
+                                tabPageNames={this.state.subTabPageNames}
+                            />
+
                         </Dropdown>
                     </Col>
                 </Row>
+                {/* End of Tab Headers */}
 
                 {/* Tab Content */}
                 <Row>
                     <Col >
-                        <Tab.Content>
-                            {this.createTabContent(content, this.state.subTabPageNames)}
-                        </Tab.Content>
+
+                        <TabContent
+                            theContent={content}
+                            tabPageNames={this.state.subTabPageNames}
+                        />
+
                     </Col>
                 </Row>
+                {/* End of Tab Content */}
             </Tab.Container>
         )
     }
