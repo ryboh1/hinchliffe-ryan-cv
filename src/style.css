@@ -2,6 +2,19 @@
 /* Fonts */
 /* Colours */
 /*Stylesheets*/
+.text-color {
+  color: white;
+}
+
+.ribbon-background-color {
+  background-color: #c72929;
+}
+
+.image-center {
+  display: block;
+  margin: auto;
+}
+
 body {
   margin: 0;
   font-family: roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -52,11 +65,7 @@ code {
 }
 .business-card {
   max-width: 300px;
-  margin: auto;
-  padding: 1rem 0rem 0rem;
-  color: white;
   background-image: linear-gradient(180deg, #d4d4d2 25%, #7e98b5 25% 100%);
-  position: relative;
   z-index: 20;
   -webkit-box-shadow: 7px 4px 5px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 7px 4px 5px -4px rgba(0, 0, 0, 0.75);
@@ -66,30 +75,18 @@ code {
   width: 175px;
   background-color: white;
 }
-.business-card .business-card-top img {
-  display: block;
-  margin: auto;
+
+.business-card-top img {
   margin-top: 10%;
   border-radius: 100px;
   width: 150px;
 }
-.business-card .business-card-top .business-card-title {
-  font-weight: bold;
-}
-.business-card .business-card-top .business-card-sub-title {
-  font-weight: normal;
-}
-.business-card .business-card-bottom {
-  padding: 1rem;
-}
-.business-card .business-card-bottom li {
+
+.business-card-bottom li {
   word-break: break-all;
 }
-.business-card .business-card-bottom li a {
+.business-card-bottom li a {
   color: white;
-}
-.business-card button {
-  border-radius: 0rem;
 }
 
 .content-window {
@@ -366,19 +363,20 @@ code {
   border-radius: 50px;
 }
 
-.tab-pane-tab-skills .col {
-  text-align: center;
-  padding-top: 1rem;
-  font-family: courier-prime;
-}
-.tab-pane-tab-skills .col hr {
-  background-color: #c72929;
+.skills-page__tab-header-col hr {
   height: 3px;
-  position: absolute;
   width: 25%;
   top: calc(20px + 1rem);
   margin-left: 4%;
   transition: 1s;
+}
+
+.tab-pane-tab-skills {
+  font-family: courier-prime;
+}
+.tab-pane-tab-skills .col {
+  text-align: center;
+  padding-top: 1rem;
 }
 .tab-pane-tab-skills .col .nav-item {
   font-weight: bold;

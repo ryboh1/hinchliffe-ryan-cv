@@ -41,7 +41,7 @@ export default class SkillsPage extends Component {
             theTabs.push(
                 <Nav.Item
                     key={i}
-                    className={(i === 0) ? "currently-active tab-" + theSubTabPageNames[i] : "tab-" + theSubTabPageNames[i]}
+                    className={(i === 0) ? " skills-page__tab-item currently-active tab-" + theSubTabPageNames[i] : "tab-" + theSubTabPageNames[i]}
                 >
                     <Nav.Link
                         eventKey={theSubTabPageNames[i]}
@@ -52,7 +52,7 @@ export default class SkillsPage extends Component {
                 </Nav.Item>
             )
         }
-        theTabs.push(<hr key={theSubTabPageNames.length}></hr>)
+        theTabs.push(<hr className="ribbon-background-color position-absolute" key={theSubTabPageNames.length}></hr>)
         return theTabs
     }
 
@@ -137,12 +137,14 @@ export default class SkillsPage extends Component {
 
         return (
             <Tab.Container
-                id="sklls-page"
+                id="skllspage"
                 defaultActiveKey={this.state.subTabPageNames[0]}
             >
                 {/* Tab Headers */}
-                <Row>
-                    <Col className="d-none d-lg-block">
+                <Row
+                    className="skills-page__tab-header-row"
+                >
+                    <Col className="d-none d-lg-block skills-page__tab-header-col">
                         {this.createTabHeaders(this.state.subTabPageNames)}
                     </Col>
                     <Col className="col-lg-skills-tab d-block d-lg-none">

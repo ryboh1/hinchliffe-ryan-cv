@@ -2,21 +2,25 @@
 
 $hr-beggining: 4%;
 
+.skills-page__tab-header-col{
+  hr {
+    height: 3px;
+    width: 33% - 8%;
+    top: calc(20px + 1rem);
+    margin-left: $hr-beggining;
+    transition: 1s;
+  }
+}
+
 .tab-pane-tab-skills {
-  .col {
+  font-family:$secondary-font;
+
+  .col{
     text-align: center;
     padding-top: 1rem;
-    font-family: $secondary-font;
+  }
 
-    hr {
-      background-color: $ribbon-colour;
-      height: 3px;
-      position: absolute;
-      width: 33% - 8%;
-      top: calc(20px + 1rem);
-      margin-left: $hr-beggining;
-      transition: 1s;
-    }
+  .col {
 
     .nav-item {
       font-weight: bold;
