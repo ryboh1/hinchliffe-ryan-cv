@@ -5,6 +5,7 @@
         text-align: center;
 
         #red-button{
+            cursor: pointer;
             background: linear-gradient( $ribbon-colour 150px, #c73e1d , #a23b72 , #2e86ab 300px);
             background-size:1px 300px;
             display: inline-block;

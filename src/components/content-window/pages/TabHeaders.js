@@ -18,7 +18,7 @@ export default class TabHeaders extends Component {
             theTabs.push(
                 <Nav.Item
                     key={i}
-                    className={(i === 0) ? this.navItemClass + " currently-active tab-" + this.props.tabPageNames[i] : this.navItemClass + " tab-" + this.props.tabPageNames[i]}
+                    className={(i === 0) ? this.props.navItemClass + " currently-active tab-" + this.props.tabPageNames[i] : this.props.navItemClass + " tab-" + this.props.tabPageNames[i]}
                 >
                     <Nav.Link
                         eventKey={this.props.tabPageNames[i]}
@@ -46,7 +46,7 @@ export default class TabHeaders extends Component {
     render() {
         return (
             <Col className="d-none d-lg-block skills-page__tab-header-col">
-                { this.createTabHeaders( this.props.tabPageNames ) }
+                { this.createTabHeaders( ) }
                 {this.props.children}
             </Col>
         )

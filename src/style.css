@@ -371,41 +371,50 @@ code {
   transition: 1s;
 }
 
-.tab-pane-tab-skills {
-  font-family: courier-prime;
-}
-.tab-pane-tab-skills .col {
-  text-align: center;
-  padding-top: 1rem;
-}
-.tab-pane-tab-skills .col .nav-item {
+.skills-page__tab-item,
+.lg-skills-tabs {
   font-weight: bold;
   text-transform: capitalize;
   display: inline-block;
   width: 33%;
 }
-.tab-pane-tab-skills .col .nav-item a {
+.skills-page__tab-item a,
+.lg-skills-tabs a {
   color: black;
 }
-.tab-pane-tab-skills .col .nav-item.tab-languages.currently-active ~ hr {
+.skills-page__tab-item.tab-languages.currently-active ~ hr,
+.lg-skills-tabs.tab-languages.currently-active ~ hr {
   margin-left: 4%;
 }
-.tab-pane-tab-skills .col .nav-item.tab-frameworks.currently-active ~ hr {
+.skills-page__tab-item.tab-frameworks.currently-active ~ hr,
+.lg-skills-tabs.tab-frameworks.currently-active ~ hr {
   margin-left: 35%;
 }
-.tab-pane-tab-skills .col .nav-item.tab-technologies.currently-active ~ hr {
+.skills-page__tab-item.tab-technologies.currently-active ~ hr,
+.lg-skills-tabs.tab-technologies.currently-active ~ hr {
   margin-left: 66%;
 }
-.tab-pane-tab-skills .col .nav-item.tab-languages:hover ~ hr {
+.skills-page__tab-item.tab-languages:hover ~ hr,
+.lg-skills-tabs.tab-languages:hover ~ hr {
   margin-left: 4%;
 }
-.tab-pane-tab-skills .col .nav-item.tab-frameworks:hover ~ hr {
+.skills-page__tab-item.tab-frameworks:hover ~ hr,
+.lg-skills-tabs.tab-frameworks:hover ~ hr {
   margin-left: 35%;
 }
-.tab-pane-tab-skills .col .nav-item.tab-technologies:hover ~ hr {
+.skills-page__tab-item.tab-technologies:hover ~ hr,
+.lg-skills-tabs.tab-technologies:hover ~ hr {
   margin-left: 66%;
 }
-.tab-pane-tab-skills .col-lg-skills-tab button {
+
+.tab-content {
+  font-family: courier-prime;
+}
+.tab-content .col {
+  text-align: center;
+  padding-top: 1rem;
+}
+.tab-content .col-lg-skills-tab button {
   color: black;
   font-weight: bold;
   text-transform: capitalize;
@@ -414,31 +423,31 @@ code {
   border-color: #c72929;
   border-width: 2px;
 }
-.tab-pane-tab-skills .col-lg-skills-tab button::after {
+.tab-content .col-lg-skills-tab button::after {
   vertical-align: middle;
 }
-.tab-pane-tab-skills .col-lg-skills-tab button:active {
+.tab-content .col-lg-skills-tab button:active {
   color: black !important;
   border-color: #c72929 !important;
   background-color: transparent !important;
 }
-.tab-pane-tab-skills .col-lg-skills-tab button:focus {
+.tab-content .col-lg-skills-tab button:focus {
   box-shadow: none !important;
 }
-.tab-pane-tab-skills .lg-skills-tabs {
+.tab-content .lg-skills-tabs {
   display: block !important;
 }
-.tab-pane-tab-skills .lg-skills-tabs.d-none {
+.tab-content .lg-skills-tabs.d-none {
   display: none !important;
 }
-.tab-pane-tab-skills .dropdown-menu {
+.tab-content .dropdown-menu {
   width: 175px;
 }
 
-.technology-container {
+.skills-page__technology-container {
   margin-top: 2rem;
 }
-.technology-container .technology-buttons {
+.skills-page__technology-container .technology-buttons {
   position: relative;
   top: 0px;
   font-weight: bold;
@@ -451,7 +460,7 @@ code {
   transition: 0.25s;
   box-shadow: -1px 3px 3px 0 rgba(0, 0, 0, 0.3);
 }
-.technology-container .technology-buttons:hover {
+.skills-page__technology-container .technology-buttons:hover {
   top: -3px;
   box-shadow: -6px 14px 12px 2px rgba(0, 0, 0, 0.3);
 }
@@ -469,7 +478,7 @@ code {
   }
 }
 @media (max-width: 350px) {
-  .technology-container .technology-buttons {
+  .skills-page__technology-container .technology-buttons {
     display: block;
   }
 }
@@ -667,6 +676,7 @@ code {
   text-align: center;
 }
 .red-button-row .col #red-button {
+  cursor: pointer;
   background: linear-gradient(#c72929 150px, #c73e1d, #a23b72, #2e86ab 300px);
   background-size: 1px 300px;
   display: inline-block;

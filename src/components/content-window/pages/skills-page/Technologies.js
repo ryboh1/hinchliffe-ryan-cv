@@ -24,7 +24,7 @@ export default class Technologies extends Component {
 
     render() {
         return (
-            <div className="technology-container">
+            <div className="skills-page__technology-container">
                 {this.createButtons(this.props.technologyNames)}         
             </div>
         )
