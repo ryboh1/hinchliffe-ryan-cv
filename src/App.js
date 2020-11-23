@@ -29,7 +29,7 @@ class App extends React.Component {
                 github="https://www.github.com/ryboh1"
                 email="ryanhinchliffe1@gmail.com"
                 phone="07951261599"
-                linkedin="https://www.linkedin.com/in/ryan-hinchliffe-403314183"
+                linkedin="https://www.linkedin.com/in/ryan-benjamin-hinchliffe-403314183"
                 location="Oxford/Chesterfield"
                 staticCv={staticCv}
               />
