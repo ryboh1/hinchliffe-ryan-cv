@@ -24,9 +24,9 @@ export default class SkillsPage extends Component {
                 skillLevel: [90, 90, 85, 50, 50]
             },
             frameworksObject: {
-                skillNames: ["React.js", "D3.js", "Sass", "Bootstrap", "jQuery"],
-                skillLength: ["1 year", "1 year", "1 year", "2 years", "2 years"],
-                skillLevel: [75, 75, 90, 90, 80]
+                skillNames: ["React.js", "Redux", "Sass", "Bootstrap", "D3.js"],
+                skillLength: ["1 year", "Recent", "1 year", "2 years", "1 year"],
+                skillLevel: [75, 65, 90, 90, 75]
             },
             technologies: ["Git", "Github", "Jira", "Wordpress", "FileZilla", "NPM", "Linux", "Figma", "VS-Code", "Intelli-J"],
             skillsClasses: ["languages-skills", "framework-skills"],

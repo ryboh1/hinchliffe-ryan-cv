@@ -30,7 +30,7 @@ class App extends React.Component {
                 email="ryanhinchliffe1@gmail.com"
                 phone="07951261599"
                 linkedin="https://www.linkedin.com/in/ryan-benjamin-hinchliffe-403314183"
-                location="Oxford/Chesterfield"
+                location="Chesterfield"
                 staticCv={staticCv}
               />
             </Col>
