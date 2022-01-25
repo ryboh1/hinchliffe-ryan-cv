@@ -4,6 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 //images
 import rotatingEarth from "../../../../gifs/rotating-earth.gif"
 import vehicleKeys from "../../../../gifs/vehicle-keys.gif"
+import codeWeaversPlugin from "../../../../gifs/codeweavers-plugin.gif"
 
 export default class ExperienceTab extends Component {
 
@@ -12,7 +13,22 @@ export default class ExperienceTab extends Component {
 
         this.state = {
 
-            companies: ["dataKraken", "seoCapital"],
+            companies: ["codeWeavers","dataKraken", "seoCapital"],
+
+            codeWeavers: {
+                company: "Code Weavers",
+                location: "Remote",
+                jobTitle: "Web App Developer",
+                timeInPosition: "Jan 2021 - Present",
+                jobHours: "Full Time",
+                roleIncluded: [
+                    `Using the Angular Framework and RXJS built and maintained custom car 
+                    finance plugins and journeys for major car companies`,
+                    "Handled customer support tickets",
+                    "Wrote unit and end to end tests for angular components"
+                ],
+                gif: [codeWeaversPlugin, "A Finance Calculator"]
+            },
 
             dataKraken: {
                 company: "Data Kraken",

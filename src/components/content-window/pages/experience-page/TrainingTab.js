@@ -9,9 +9,8 @@ export default class TrainingTab extends Component {
             introduction: "All courses completed have been online.",
             courses: {
                 names: ["Harvards Introduction to Computer Science", "Code Academy", "Microsofts Introduction to React.js", "Programming Foundations Object Oriented Design"],
-                information: ["Edx (300 hours)", "Javascript, HTML, CSS, Java, Express.js, Node.js (100 hours +)", "Edx (20 hours)", "Linkedin Learning (20 hours)"]
+                information: ["Edx (300 hours)", "Typescript, Javascript, HTML, CSS, Java, Express.js, Node.js (100 hours +)", "Edx (20 hours)", "Linkedin Learning (20 hours)"]
             }
-
         }
     }
 
