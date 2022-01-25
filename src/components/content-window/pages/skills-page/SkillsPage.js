@@ -24,11 +24,11 @@ export default class SkillsPage extends Component {
                 skillLevel: [90, 99, 90, 99]
             },
             frameworksObject: {
-                skillNames: ["Angular", "Sass", "Bootstrap", "RXJS"],
-                skillLength: ["1 year", "2 years", "3 years", "1 year"],
-                skillLevel: [75, 90, 99, 50]
+                skillNames: ["Angular", "Sass", "Bootstrap", "RXJS", "Jest"],
+                skillLength: ["1 year", "2 years", "3 years", "1 year", "1 year"],
+                skillLevel: [75, 90, 99, 50, 50]
             },
-            technologies: ["Git", "Github", "Unix", "Jira", "Wordpress", "FileZilla", "NPM", "Figma", "VS-Code", "Intelli-J"],
+            technologies: ["Git", "Unit Tests", "E2E tests", "Github", "Unix", "Jira", "Wordpress", "FileZilla", "NPM", "Figma", "VS-Code", "Intelli-J"],
             skillsClasses: ["languages-skills", "framework-skills"],
             subTabPageNames: ["languages", "frameworks", "technologies"]
         }
