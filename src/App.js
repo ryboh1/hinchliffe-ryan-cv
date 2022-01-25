@@ -28,9 +28,9 @@ class App extends React.Component {
                 title="Web Developer"
                 github="https://www.github.com/ryboh1"
                 email="ryanhinchliffe1@gmail.com"
-                phone="07951261599"
+                phone="07554901580"
                 linkedin="https://www.linkedin.com/in/ryan-benjamin-hinchliffe-403314183"
-                location="Chesterfield"
+                location="Nottingham"
                 staticCv={staticCv}
               />
             </Col>
