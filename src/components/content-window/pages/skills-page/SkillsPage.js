@@ -19,16 +19,16 @@ export default class SkillsPage extends Component {
         this.state = {
             pageName:"skills",
             languagesObject: {
-                skillNames: ["Javascript", "HTML", "CSS", "Java", "PHP"],
-                skillLength: ["1 year", "2 years", "2 years", "Recent", "Recent"],
-                skillLevel: [90, 90, 85, 50, 50]
+                skillNames: ["Typescript", "HTML", "CSS", "Javascript"],
+                skillLength: ["1 year", "3 years", "3 years", "2 years"],
+                skillLevel: [90, 99, 90, 99]
             },
             frameworksObject: {
-                skillNames: ["React.js", "Redux", "Sass", "Bootstrap", "D3.js"],
-                skillLength: ["1 year", "Recent", "1 year", "2 years", "1 year"],
-                skillLevel: [75, 65, 90, 90, 75]
+                skillNames: ["Angular", "Sass", "Bootstrap", "RXJS"],
+                skillLength: ["1 year", "2 years", "3 years", "1 year"],
+                skillLevel: [75, 90, 99, 50]
             },
-            technologies: ["Git", "Github", "Jira", "Wordpress", "FileZilla", "NPM", "Linux", "Figma", "VS-Code", "Intelli-J"],
+            technologies: ["Git", "Github", "Unix", "Jira", "Wordpress", "FileZilla", "NPM", "Figma", "VS-Code", "Intelli-J"],
             skillsClasses: ["languages-skills", "framework-skills"],
             subTabPageNames: ["languages", "frameworks", "technologies"]
         }
