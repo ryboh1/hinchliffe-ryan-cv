@@ -36,7 +36,7 @@ export default class ExperienceTab extends Component {
                 jobTitle: "Web Developer",
                 timeInPosition: "Mar 2020 - Nov 2020",
                 jobHours: "Full Time",
-                roleIncluded: ["Created Interactive Data Visualisations", "Created Data Krakens Entire Website from design to code",
+                roleIncluded: [ "Created Interactive Data Visualisations", "Created Data Krakens Entire Website from design to code",
                     "Created A backend API for a major telephone company"],
                 gif: [rotatingEarth, "Rotating Earth"]
             },
