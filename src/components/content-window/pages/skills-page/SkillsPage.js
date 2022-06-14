@@ -20,13 +20,13 @@ export default class SkillsPage extends Component {
             pageName:"skills",
             languagesObject: {
                 skillNames: ["Typescript", "HTML", "CSS", "Javascript"],
-                skillLength: ["1 year", "3 years", "3 years", "2 years"],
+                skillLength: ["1.5 years", "3 years", "3 years", "2 years"],
                 skillLevel: [90, 99, 90, 99]
             },
             frameworksObject: {
                 skillNames: ["Angular", "Sass", "Bootstrap", "RXJS", "Jest"],
-                skillLength: ["1 year", "2 years", "3 years", "1 year", "1 year"],
-                skillLevel: [75, 90, 99, 50, 50]
+                skillLength: ["1.5 years", "2 years", "3 years", "1 year", "1 year"],
+                skillLevel: [75, 90, 99, 50, 60]
             },
             technologies: ["Git", "Unit Tests", "E2E tests", "Github", "Unix", "Jira", "Wordpress", "FileZilla", "NPM", "Figma", "VS-Code", "Intelli-J"],
             skillsClasses: ["languages-skills", "framework-skills"],

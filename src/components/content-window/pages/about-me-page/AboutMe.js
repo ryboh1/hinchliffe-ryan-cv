@@ -13,8 +13,8 @@ export default class AboutMe extends Component {
 
         this.state = {
             pageHeader: "About Me",
-            aboutMeText: ["I’m a coffee shop employee turned web developer, who moved from Chesterfield to Oxford.",
-                "I went from making coffees to making websites, web apps, data visualisations and API’s. When I’m not working you can find me climbing, playing video games or shamelessly supporting Manchester United !",
+            aboutMeText: ["I’m a coffee shop employee turned web developer, I moved from Chesterfield to Oxford then to Nottingham again.",
+                "I went from making coffees to making websites, web apps, data visualisations and API’s. When I’m not working you can find me climbing, baking, or shamelessly supporting Manchester United !",
                 "I’m always looking to learn new skills whether it’s in web development or elsewhere; recently I’ve joined a toast masters club for public speaking.",
                 "Want to work together? I’d love to hear from you."],
             aboutMeImages: [pictureOfMe, rockWall, toastMasters],

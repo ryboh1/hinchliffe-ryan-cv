@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 
 //Content
-import imageOfMe from "./images/ryan-hinchliffe.jpeg"
+import imageOfMe from "./images/ryan-hinchliffe-bread.jpg"
 import staticCv from "./static-cv/ryan-hinchliffe-cv.pdf"
 import redButtonIcon from "./images/icon-red-button.png"
 import reactLogo from "./images/react-logo.png"
