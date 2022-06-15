@@ -28,7 +28,7 @@ export default class SkillsPage extends Component {
                 skillLength: ["1.5 years", "2 years", "3 years", "1 year", "1 year"],
                 skillLevel: [75, 90, 99, 50, 60]
             },
-            technologies: ["Git", "Unit Tests", "E2E tests", "Github", "Unix", "Jira", "Wordpress", "FileZilla", "NPM", "Figma", "VS-Code", "Intelli-J"],
+            technologies: ["Git", "Unit Tests", "E2E tests", "SVN", "Unix", "Jira", "Wordpress", "FileZilla", "NPM", "Figma", "VS-Code", "Intelli-J"],
             skillsClasses: ["languages-skills", "framework-skills"],
             subTabPageNames: ["languages", "frameworks", "technologies"]
         }
