@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hinchliffe-ryan-cv/static/css/main.1072101f.chunk.css",
-    "main.js": "/hinchliffe-ryan-cv/static/js/main.9c685dff.chunk.js",
-    "main.js.map": "/hinchliffe-ryan-cv/static/js/main.9c685dff.chunk.js.map",
+    "main.js": "/hinchliffe-ryan-cv/static/js/main.56b86b8d.chunk.js",
+    "main.js.map": "/hinchliffe-ryan-cv/static/js/main.56b86b8d.chunk.js.map",
     "runtime-main.js": "/hinchliffe-ryan-cv/static/js/runtime-main.b6aa24b5.js",
     "runtime-main.js.map": "/hinchliffe-ryan-cv/static/js/runtime-main.b6aa24b5.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/hinchliffe-ryan-cv/static/css/2.20aa2d7b.chunk.css",
@@ -30,6 +30,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.6ca8f58e.chunk.js",
     "static/css/main.1072101f.chunk.css",
-    "static/js/main.9c685dff.chunk.js"
+    "static/js/main.56b86b8d.chunk.js"
   ]
 }
